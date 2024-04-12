@@ -1,0 +1,12 @@
+{{- $username := promptString "username" }}
+{{- $email := promptString "email" }}
+{{- $purposes := list "home" "work" }}
+{{- $purpose := promptChoice "Machine purpose" $purposes -}}
+
+[data]
+email = {{ $email | quote }}
+username = {{ $username | quote }}
+purpose = {{ $purpose | quote }}
+
+[cd]
+command = "zsh"
