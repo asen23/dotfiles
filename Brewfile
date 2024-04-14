@@ -1,5 +1,3 @@
-brew "bitwarden-cli"
-brew "chezmoi"
 brew "starship"
 brew "zoxide"
 brew "eza"
