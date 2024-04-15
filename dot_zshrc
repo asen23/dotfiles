@@ -91,7 +91,17 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Setup Env Variable
 # SSH Agent
 zstyle :omz:plugins:ssh-agent lazy yes
 
+# Load before script
+for FILE in ~/.zshrc.d/*.before.zshrc(N); do
+    source $FILE
+done
+
 source $ZSH/oh-my-zsh.sh
+
+# Load after script
+for FILE in ~/.zshrc.d/*.after.zshrc(N); do
+    source $FILE
+done
 
 # User configuration
 
