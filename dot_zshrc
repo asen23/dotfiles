@@ -84,10 +84,6 @@ plugins=(
 # Zoxide
 ZOXIDE_CMD_OVERRIDE=cd
 
-# Brew
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}" # Autocomplete
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" # Setup Env Variable
-
 # SSH Agent
 zstyle :omz:plugins:ssh-agent lazy yes
 

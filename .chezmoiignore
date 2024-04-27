@@ -2,3 +2,8 @@
 .oh-my-zsh/cache/**/*
 Brewfile
 Brewfile.lock.json
+{{- if ne .chezmoi.os "darwin"}}
+.zshrc.d/*_darwin*
+{{- else if ne .chezmoi.os "linux" }}
+.zshrc.d/*_linux*
+{{- end }}
