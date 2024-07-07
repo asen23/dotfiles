@@ -1,11 +1,12 @@
 {{- $codespaces:= env "CODESPACES" | not | not -}}
+{{- $devcontainer:= env "REMOTE_CONTAINERS" | not | not -}}
 sourceDir = {{ .chezmoi.sourceDir | quote }}
 
 {{- $username := "" }}
 {{- $email := "" }}
 {{- $defaultBranch := "" }}
 
-{{- if $codespaces }}
+{{- if or $codespaces $devcontainer }}
   {{- $username = default "asen23" (env "CHEZMOI_USERNAME") }}
   {{- $email = default "andersenlim23@gmail.com" (env "CHEZMOI_EMAIL") }}
   {{- $defaultBranch = default "main" (env "CHEZMOI_DEFAULT_BRANCH") }}
@@ -21,6 +22,7 @@ email = {{ $email | quote }}
 username = {{ $username | quote }}
 defaultBranch = {{ $defaultBranch | quote }}
 codespaces = {{ $codespaces }}
+devcontainer = {{ $devcontainer }}
 
 [cd]
 command = "zsh"
