@@ -1,12 +1,26 @@
-{{- $username := promptString "username" }}
-{{- $email := promptString "email" }}
-{{- $purposes := list "home" "work" }}
-{{- $purpose := promptChoice "Machine purpose" $purposes -}}
+{{- $codespaces:= env "CODESPACES" | not | not -}}
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
+{{- $username := "" }}
+{{- $email := "" }}
+{{- $defaultBranch := "" }}
+
+{{- if $codespaces }}
+  {{- $username = default "asen23" (env "CHEZMOI_USERNAME") }}
+  {{- $email = default "andersenlim23@gmail.com" (env "CHEZMOI_EMAIL") }}
+  {{- $defaultBranch = default "main" (env "CHEZMOI_DEFAULT_BRANCH") }}
+{{- else }}
+  {{- $username = promptStringOnce . "username" "username" "asen23" }}
+  {{- $email = promptStringOnce . "email" "email" "andersenlim23@gmail.com" }}
+  {{- $branches := list "main" "master" }}
+  {{- $defaultBranch = promptChoiceOnce . "defaultBranch" "Git default branch" $branches "main" -}}
+{{- end }}
 
 [data]
 email = {{ $email | quote }}
 username = {{ $username | quote }}
-purpose = {{ $purpose | quote }}
+defaultBranch = {{ $defaultBranch | quote }}
+codespaces = {{ $codespaces }}
 
 [cd]
 command = "zsh"

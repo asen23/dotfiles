@@ -1,7 +1,5 @@
-{{ if eq .purpose "home" -}}
 [init]
-	defaultBranch = main
-{{ end -}}
+	defaultBranch = {{ .defaultBranch }}
 [user]
 	name = {{ .username }}
 	email = {{ .email }}

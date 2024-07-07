@@ -7,3 +7,4 @@ Brewfile.lock.json
 {{- else if ne .chezmoi.os "linux" }}
 .zshrc.d/*_linux*
 {{- end }}
+install.sh
