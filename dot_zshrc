@@ -99,6 +99,13 @@ for FILE in ~/.zshrc.d/*.after.zshrc(N); do
     source $FILE
 done
 
+# Per directory zshrc
+function chpwd() {
+  if [ -r $PWD/.zshrc ]; then
+    source $PWD/.zshrc
+  fi
+}
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
