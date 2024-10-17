@@ -125,6 +125,7 @@ done
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Eza
 alias ld="eza -lhD"
 alias lf="eza -lhf"
 alias lh="eza -lhd .* --group-directories-first"
@@ -132,5 +133,16 @@ alias la="eza -la --group-directories-first"
 alias ls="eza -lh --group-directories-first"
 alias lz="eza"
 
+# Ripgrep
+alias grep='rg'
+alias egrep='rg'
+alias fgrep='rg -F'
+alias xzgrep='rg -z'
+alias xzegrep='rg -z'
+alias xzfgrep='rg -z -F'
+
 # Starship
 eval "$(starship init zsh)"
+
+# Atuin
+eval "$(atuin init zsh)"
