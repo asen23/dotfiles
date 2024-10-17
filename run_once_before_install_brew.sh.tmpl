@@ -1,5 +1,5 @@
 {{- $nobrew:= stat (joinPath .chezmoi.homeDir ".nobrew") -}}
-{{ if not $nobrew }}
+{{ if not $nobrew -}}
 #!/bin/bash
 
 # Check if brew already installed
