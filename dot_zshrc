@@ -103,6 +103,9 @@ done
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Distrobox custom home
+export DBX_CONTAINER_HOME_PREFIX=~/distrobox
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
