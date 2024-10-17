@@ -1,3 +1,5 @@
+{{- $nobrew:= stat (joinPath .chezmoi.homeDir ".nobrew") -}}
+{{ if not $nobrew }}
 #!/bin/bash
 
 # Check if brew already installed
@@ -7,3 +9,4 @@ then
 fi
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+{{ end }}

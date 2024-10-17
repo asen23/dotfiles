@@ -1,3 +1,5 @@
+{{- $nobrew:= stat (joinPath .chezmoi.homeDir ".nobrew") -}}
+{{ if not $nobrew }}
 #!/bin/bash
 
 # Brewfile hash: {{ include "Brewfile" | sha256sum }}
@@ -9,3 +11,4 @@ fi
 
 brew update
 brew bundle --no-lock --file {{ joinPath .chezmoi.sourceDir "Brewfile" | quote }}
+{{ end }}
