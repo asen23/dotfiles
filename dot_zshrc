@@ -105,6 +105,7 @@ done
 
 # Distrobox custom home
 export DBX_CONTAINER_HOME_PREFIX=~/distrobox
+export DBX_CONTAINER_ALWAYS_PULL=1
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
