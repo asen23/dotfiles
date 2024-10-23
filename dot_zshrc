@@ -141,6 +141,9 @@ alias xzgrep='rg -z'
 alias xzegrep='rg -z'
 alias xzfgrep='rg -z -F'
 
+# fd
+alias find='fd'
+
 # Starship
 eval "$(starship init zsh)"
 
