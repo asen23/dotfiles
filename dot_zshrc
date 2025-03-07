@@ -79,6 +79,8 @@ plugins=(
 	direnv
 	ssh-agent
 	zsh-autosuggestions
+	zsh-syntax-highlighting-theme
+	zsh-syntax-highlighting
 )
 
 # Zoxide
