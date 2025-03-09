@@ -8,7 +8,7 @@ style = "bold white"
 format = '[$time]($style) '
 
 [username]
-show_always=true
+show_always = true
 
 [cmd_duration]
 min_time = 1000
@@ -25,6 +25,9 @@ symbol = " "
 
 [c]
 symbol = " "
+
+[cmake]
+symbol = " "
 
 [conda]
 symbol = " "
@@ -56,6 +59,9 @@ symbol = " "
 [git_branch]
 symbol = " "
 style = "bold #eb8334"
+
+[git_commit]
+tag_symbol = '  '
 
 [golang]
 symbol = " "
@@ -113,6 +119,7 @@ Amazon = " "
 Android = " "
 Arch = " "
 Artix = " "
+CachyOS = " "
 CentOS = " "
 Debian = " "
 DragonFly = " "
@@ -134,6 +141,7 @@ MidnightBSD = " "
 Mint = " "
 NetBSD = " "
 NixOS = " "
+Nobara = " "
 OpenBSD = "󰈺 "
 openSUSE = " "
 OracleLinux = "󰌷 "
@@ -172,7 +180,7 @@ symbol = "󰟔 "
 symbol = " "
 
 [rust]
-symbol = " "
+symbol = "󱘗 "
 
 [scala]
 symbol = " "
@@ -182,3 +190,6 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[gradle]
+symbol = " "
