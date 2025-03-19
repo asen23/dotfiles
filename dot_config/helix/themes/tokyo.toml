@@ -1,0 +1,4 @@
+inherits = "tokyonight" # Or whichever theme you want
+"ui.cursor.primary.normal" = {bg = "blue"}
+"ui.cursor.primary.select" = {bg = "blue"}
+"ui.cursor.primary.insert" = {bg = "blue"}
