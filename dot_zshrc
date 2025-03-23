@@ -87,7 +87,7 @@ plugins=(
 ZOXIDE_CMD_OVERRIDE=cd
 
 # SSH Agent
-zstyle :omz:plugins:ssh-agent lazy yes
+# zstyle :omz:plugins:ssh-agent lazy yes
 
 # Load before script
 for FILE in ~/.zshrc.d/*.before.zshrc(N); do
