@@ -83,6 +83,9 @@ plugins=(
 	zsh-syntax-highlighting
 	fzf-tab
 )
+if [[ -e ~/.zshrc.d/extra.plugin.zshrc ]] then
+	source ~/.zshrc.d/extra.plugin.zshrc
+fi
 
 # Zoxide
 ZOXIDE_CMD_OVERRIDE=cd
